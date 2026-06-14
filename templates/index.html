@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>NextGen Trading 📈</h1>
+            <h1>NextGen Trading <span style="font-size: 1.5rem">✨</span></h1>
             <div id="market-status" class="status-badge">Checking market...</div>
         </header>
 
@@ -18,9 +18,9 @@
             <div class="dashboard-grid">
                 <!-- Portfolio Summary -->
                 <div class="card summary-card">
-                    <h2>Total Portfolio</h2>
+                    <h2>📊 Total Portfolio Value</h2>
                     <h1 id="total-value" class="mint-text">$0.00</h1>
-                    <p>Available Cash: <span id="available-cash">$0.00</span></p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Available Cash: <span id="available-cash" style="color: #fff; font-weight: 600;">$0.00</span></p>
                     <div class="chart-container">
                         <canvas id="portfolioChart"></canvas>
                     </div>
@@ -28,52 +28,32 @@
 
                 <!-- Action Panel (Buy/Sell) -->
                 <div class="card action-card">
-                    <h2>Trade Stocks</h2>
+                    <h2>⚡ Trade Execution</h2>
                     <div class="form-group">
-                        <label>Ticker Symbol (e.g., AAPL)</label>
-                        <input type="text" id="trade-ticker" placeholder="AAPL" style="text-transform:uppercase">
+                        <label>TICKER SYMBOL</label>
+                        <input type="text" id="trade-ticker" placeholder="e.g. AAPL, TSLA" style="text-transform:uppercase">
                     </div>
                     <div class="form-group">
-                        <label>Number of Shares</label>
+                        <label>SHARES TO TRADE</label>
                         <input type="number" id="trade-shares" placeholder="1" min="1">
                     </div>
                     <div class="button-group">
-                        <button id="btn-buy" class="btn btn-buy">Buy</button>
-                        <button id="btn-sell" class="btn btn-sell">Sell</button>
+                        <button id="btn-buy" class="btn btn-buy">Buy Shares</button>
+                        <button id="btn-sell" class="btn btn-sell">Sell Shares</button>
                     </div>
                     <p id="trade-message" class="message"></p>
                 </div>
 
-                <!-- Time Machine -->
-                <div class="card time-card">
-                    <h2>Time Machine ⏱️</h2>
-                    <p>What if you invested in the past?</p>
-                    <div class="form-group">
-                        <label>Stock Ticker</label>
-                        <input type="text" id="time-ticker" placeholder="NVDA" style="text-transform:uppercase">
-                    </div>
-                    <div class="form-group">
-                        <label>Investment Amount ($)</label>
-                        <input type="number" id="time-amount" placeholder="1000">
-                    </div>
-                    <div class="form-group">
-                        <label>Years Ago</label>
-                        <input type="number" id="time-years" placeholder="3" min="1" max="20">
-                    </div>
-                    <button id="btn-timemachine" class="btn btn-time">Travel Back</button>
-                    <div id="time-result" class="time-result"></div>
-                </div>
-
                 <!-- Holdings Table -->
                 <div class="card holdings-card">
-                    <h2>Current Holdings</h2>
+                    <h2>💼 Current Holdings</h2>
                     <table id="holdings-table">
                         <thead>
                             <tr>
-                                <th>Ticker</th>
-                                <th>Shares</th>
-                                <th>Price</th>
-                                <th>Total Value</th>
+                                <th>Asset Ticker</th>
+                                <th>Shares Owned</th>
+                                <th>Current Market Price</th>
+                                <th>Total Position Value</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -81,6 +61,27 @@
                         </tbody>
                     </table>
                 </div>
+
+                <!-- Time Machine -->
+                <div class="card time-card">
+                    <h2>⏱️ Time Machine</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.9rem;">Simulate past investments with real historical data.</p>
+                    <div class="form-group">
+                        <label>ASSET TICKER</label>
+                        <input type="text" id="time-ticker" placeholder="NVDA" style="text-transform:uppercase">
+                    </div>
+                    <div class="form-group">
+                        <label>INVESTMENT AMOUNT ($)</label>
+                        <input type="number" id="time-amount" placeholder="1000">
+                    </div>
+                    <div class="form-group">
+                        <label>YEARS IN THE PAST</label>
+                        <input type="number" id="time-years" placeholder="3" min="1" max="20">
+                    </div>
+                    <button id="btn-timemachine" class="btn btn-time">Simulate Investment</button>
+                    <div id="time-result" class="time-result"></div>
+                </div>
+
             </div>
         </main>
     </div>
