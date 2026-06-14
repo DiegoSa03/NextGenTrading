@@ -1,8 +1,8 @@
-# NextGen Trading Simulator 📈✨
+# NextGen Trading Simulator 📈
 
 Un simulador interactivo de "Paper Trading" (inversiones virtuales) construido con Python (Flask) usando datos reales del mercado de valores a través de Yahoo Finance. Este fue desarrollado como proyecto final para Code in Place (Stanford).
 
-## ✨ Características Principales
+##  Características Principales
 - **Datos en Tiempo Real:** Utiliza la librería `yfinance` para descargar precios actuales de las acciones.
 - **Interfaz Premium (Glassmorphism):** Diseño moderno, modo oscuro elegante, animaciones suaves y un gráfico de dona interactivo usando Chart.js.
 - **Máquina del Tiempo (Time Machine) ⏱️:** ¿Qué pasaría si hubieras invertido $1,000 en Apple hace 5 años? Esta herramienta te permite simular inversiones pasadas y ver tus ganancias hipotéticas al día de hoy.
@@ -10,7 +10,7 @@ Un simulador interactivo de "Paper Trading" (inversiones virtuales) construido c
 
 ---
 
-## 🚀 Guía de Instalación y Uso (Paso a Paso)
+##  Guía de Instalación y Uso (Paso a Paso)
 
 Sigue estos sencillos pasos para ejecutar la aplicación en tu propia computadora:
 
