@@ -1,46 +1,52 @@
-# NextGen Trading Simulator 📈
+# NextGen Trading Simulator
 
-Un simulador interactivo de "Paper Trading" (inversiones virtuales) construido con Python (Flask) usando datos reales del mercado de valores a través de Yahoo Finance. Este fue desarrollado como proyecto final para Code in Place (Stanford).
+A professional, interactive paper trading simulator web application built with Python (Flask) that utilizes real-time market data from Yahoo Finance. This project was developed as the final submission for Stanford's Code in Place program.
 
-##  Características Principales
-- **Datos en Tiempo Real:** Utiliza la librería `yfinance` para descargar precios actuales de las acciones.
-- **Interfaz Premium (Glassmorphism):** Diseño moderno, modo oscuro elegante, animaciones suaves y un gráfico de dona interactivo usando Chart.js.
-- **Máquina del Tiempo (Time Machine) ⏱️:** ¿Qué pasaría si hubieras invertido $1,000 en Apple hace 5 años? Esta herramienta te permite simular inversiones pasadas y ver tus ganancias hipotéticas al día de hoy.
-- **Persistencia Local:** Todo tu portafolio y tu dinero virtual se guardan automáticamente para que no pierdas tu progreso.
+## Key Features
 
----
+- Real-Time Market Data: Leverages the yfinance library to fetch accurate, up-to-date stock pricing directly from the stock market.
+- Interactive Dashboard: Features a modern glassmorphism UI, a dark theme, and dynamic doughnut charts powered by Chart.js for portfolio visualization.
+- Time Machine Simulator: Allows users to input a past investment amount on a specific ticker over a designated number of years to calculate hypothetical current profits or losses based on historical market data.
+- Local Persistence: Automatically saves portfolio holdings and available cash balance to a local portfolio.json file, ensuring user progress is preserved across different sessions.
 
-##  Guía de Instalación y Uso (Paso a Paso)
+## Installation and Setup Instructions
 
-Sigue estos sencillos pasos para ejecutar la aplicación en tu propia computadora:
+Follow these detailed steps to configure and run the application on your local machine:
 
-### 1. Descargar el código
-Puedes clonar el repositorio usando Git:
+### 1. Download the Repository
+Clone the repository using Git by running the following command in your terminal:
 ```bash
 git clone https://github.com/DiegoSa03/NextGenTrading.git
 ```
-*(O simplemente haz clic en el botón verde "Code" arriba y selecciona "Download ZIP", luego descomprime la carpeta).*
+Alternatively, click the Code button on the GitHub page and select Download ZIP. Extract the folder to your preferred location.
 
-### 2. Verificar que tienes Python
-Necesitas tener Python 3 instalado. Puedes verificarlo abriendo tu terminal o línea de comandos y escribiendo:
+### 2. Verify Python Installation
+Ensure that Python 3 is installed on your system. Open your terminal or command prompt and verify by running:
 ```bash
 python --version
 ```
 
-### 3. Instalar las dependencias
-Abre tu terminal, navega hasta la carpeta donde descargaste el proyecto y ejecuta el siguiente comando para instalar Flask y yfinance:
+### 3. Navigate to the Project Directory
+Change your current working directory to the location where you downloaded the project:
+```bash
+cd NextGenTrading
+```
+(Make sure you are inside the folder that contains the app.py file).
+
+### 4. Install Dependencies
+The application requires specific external libraries (Flask and yfinance) to function. Install them using the provided requirements file:
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Ejecutar la Aplicación
-Una vez instaladas las dependencias, enciende el servidor web ejecutando:
+### 5. Run the Application Server
+Start the backend Python Flask server by executing the main script:
 ```bash
 python app.py
 ```
 
-### 5. Abrir en el Navegador
-Abre tu navegador web favorito (Chrome, Edge, Safari) y ve a la siguiente dirección:
-**[http://127.0.0.1:5000/](http://127.0.0.1:5000/)**
+### 6. Access the Web Application
+Once the terminal indicates that the server is running, open your preferred web browser and navigate to the local host address provided:
+http://127.0.0.1:5000/
 
-¡Listo! Ya puedes empezar a comprar acciones, viajar en el tiempo y ver crecer tu portafolio.
+The dashboard will load, and you can begin executing simulated trades immediately.
