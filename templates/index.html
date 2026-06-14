@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen Trading</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>NextGen Trading 📈</h1>
+            <div id="market-status" class="status-badge">Checking market...</div>
+        </header>
+
+        <main>
+            <div class="dashboard-grid">
+                <!-- Portfolio Summary -->
+                <div class="card summary-card">
+                    <h2>Total Portfolio</h2>
+                    <h1 id="total-value" class="mint-text">$0.00</h1>
+                    <p>Available Cash: <span id="available-cash">$0.00</span></p>
+                    <div class="chart-container">
+                        <canvas id="portfolioChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Action Panel (Buy/Sell) -->
+                <div class="card action-card">
+                    <h2>Trade Stocks</h2>
+                    <div class="form-group">
+                        <label>Ticker Symbol (e.g., AAPL)</label>
+                        <input type="text" id="trade-ticker" placeholder="AAPL" style="text-transform:uppercase">
+                    </div>
+                    <div class="form-group">
+                        <label>Number of Shares</label>
+                        <input type="number" id="trade-shares" placeholder="1" min="1">
+                    </div>
+                    <div class="button-group">
+                        <button id="btn-buy" class="btn btn-buy">Buy</button>
+                        <button id="btn-sell" class="btn btn-sell">Sell</button>
+                    </div>
+                    <p id="trade-message" class="message"></p>
+                </div>
+
+                <!-- Time Machine -->
+                <div class="card time-card">
+                    <h2>Time Machine ⏱️</h2>
+                    <p>What if you invested in the past?</p>
+                    <div class="form-group">
+                        <label>Stock Ticker</label>
+                        <input type="text" id="time-ticker" placeholder="NVDA" style="text-transform:uppercase">
+                    </div>
+                    <div class="form-group">
+                        <label>Investment Amount ($)</label>
+                        <input type="number" id="time-amount" placeholder="1000">
+                    </div>
+                    <div class="form-group">
+                        <label>Years Ago</label>
+                        <input type="number" id="time-years" placeholder="3" min="1" max="20">
+                    </div>
+                    <button id="btn-timemachine" class="btn btn-time">Travel Back</button>
+                    <div id="time-result" class="time-result"></div>
+                </div>
+
+                <!-- Holdings Table -->
+                <div class="card holdings-card">
+                    <h2>Current Holdings</h2>
+                    <table id="holdings-table">
+                        <thead>
+                            <tr>
+                                <th>Ticker</th>
+                                <th>Shares</th>
+                                <th>Price</th>
+                                <th>Total Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/main.js"></script>
+</body>
+</html>
